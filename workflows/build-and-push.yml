@@ -24,11 +24,11 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t jordyhenman/henman-WOPro-Service .
+          docker build -t jordyhenman/henman-wopro-service .
 
       - name: Log in to DockerHub
         run: echo "${{ secrets.DOCKERHUB_PAT }}" | docker login -u jordyhenman --password-stdin
 
       - name: Push Docker image
         run: |
-          docker push jordyhenman/henman-WOPro-Service
+          docker push jordyhenman/henman-wopro-service
