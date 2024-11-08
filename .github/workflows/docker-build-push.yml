@@ -10,34 +10,34 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout the repository
+      
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      # Set up JDK (Java 11, or the version you need)
+      
       - name: Set up JDK
         uses: actions/setup-java@v2
         with:
           java-version: '11'
 
-      # Build the Java application (assuming it's a Spring Boot application)
+     
       - name: Build the application
         run: |
           ./mvnw clean package -DskipTests
 
-      # Build Docker image
+    
       - name: Build Docker image
         run: |
           docker build -t jordyhenman/henman-wopro-service:$GITHUB_SHA .
 
-      # Log in to DockerHub using the Personal Access Token (PAT)
+     
       - name: Log in to DockerHub
         uses: docker/login-action@v2
         with:
-          username: ${{ secrets.DOCKER_USERNAME }}
+          username: jordyhenman
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      # Push the Docker image to DockerHub
+      
       - name: Push Docker image to DockerHub
         run: |
           docker push jordyhenman/henman-wopro-service:$GITHUB_SHA
