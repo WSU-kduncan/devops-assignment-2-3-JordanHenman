@@ -2,7 +2,7 @@
 
 [Assignment Description](https://github.com/pattonsgirl/CS3900-AppSoftwareDev/blob/main/DevOps/Assignment2/Assignment2.md)
 
-[Edit this file with your assignment documentation deliverables](build-pipeline.md)
+[Edit this file with your assignment documentation deliverables]([build-pipeline.md](https://github.com/WSU-kduncan/devops-assignment-2-3-JordanHenman/actions/runs/11745442569/job/32722874186))
 
 Changelog:
 - emptied `workorderpro` service folder into parent folder
